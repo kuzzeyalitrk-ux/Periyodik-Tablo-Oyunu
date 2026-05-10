@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periyodik Tablo Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="startScreen">
+            <h1>🧪 Periyodik Tablo Oyunu</h1>
+            <p>Seviye seç ve testi başlat!</p>
+            <div class="mode-buttons">
+                <button onclick="setMode('easy')" class="btn-easy">KOLAY (10sn)</button>
+                <button onclick="setMode('hard')" class="btn-hard">ZOR (5sn)</button>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8em; opacity: 0.7;">Zor modda sorular ters köşe gelebilir!</p>
+        </div>
+
+        <div id="gameScreen" style="display: none;">
+            <div id="scorePanel">
+                <span id="score">Skor: 0 | ❤️ Can: 3</span>
+                <span id="questionCount">Süre: 10s</span>
+            </div>
+            
+            <div id="questionContainer">
+                <h2 id="question">Soru yükleniyor...</h2>
+                <div id="choices" class="choices-grid"></div>
+            </div>
+            
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
